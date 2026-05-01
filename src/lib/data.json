@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://i.postimg.cc/example-course1.png",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Masterclass",
+    "instructor": "Sarah Smith",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master user interface and user experience design principles.",
+    "image": "https://i.postimg.cc/example-course2.png",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Essentials",
+    "instructor": "Michael Johnson",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn SEO, social media marketing, and online advertising.",
+    "image": "https://i.postimg.cc/example-course3.png",
+    "category": "Marketing"
+  },
+  {
+    "id": 4,
+    "title": "React & Redux Advanced Guide",
+    "instructor": "Emily Davis",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Build scalable applications using React and Redux.",
+    "image": "https://i.postimg.cc/example-course4.png",
+    "category": "Development"
+  },
+  {
+    "id": 5,
+    "title": "Python for Data Science",
+    "instructor": "David Wilson",
+    "duration": "22 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Analyze data and build models using Python.",
+    "image": "https://i.postimg.cc/example-course5.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 6,
+    "title": "Graphic Design Fundamentals",
+    "instructor": "Sophia Brown",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn the basics of graphic design and visual communication.",
+    "image": "https://i.postimg.cc/example-course6.png",
+    "category": "Design"
+  },
+  {
+    "id": 7,
+    "title": "Machine Learning A-Z",
+    "instructor": "James Anderson",
+    "duration": "25 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Understand machine learning algorithms and real-world applications.",
+    "image": "https://i.postimg.cc/example-course7.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 8,
+    "title": "Freelancing & Career Guide",
+    "instructor": "Olivia Martinez",
+    "duration": "8 hours",
+    "rating": 4.4,
+    "level": "Beginner",
+    "description": "Learn how to start freelancing and grow your career online.",
+    "image": "https://i.postimg.cc/example-course8.png",
+    "category": "Career"
+  }
+]

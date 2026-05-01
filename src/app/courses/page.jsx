@@ -3,6 +3,7 @@ import React from "react";
 
 import Image from "next/image";
 import courses from "@/lib/data.json";
+import Link from "next/link";
 export const metadata = {
   title: "SkillSphere - All Courses",
 };
@@ -67,10 +68,11 @@ export default function CoursesPage() {
                 <span>⭐ {course.rating}</span>
               </div>
 
-              {/* Button */}
-              <button className="mt-3 w-full bg-primary text-white py-2 rounded-lg hover:opacity-90 transition">
-                Enroll Now
-              </button>
+         <Link href={`/courses/${course.id}`}>
+  <button className="mt-3 w-full bg-primary text-white py-2 rounded-lg hover:opacity-90 transition">
+    View Details
+  </button>
+</Link>
 
             </div>
           </div>

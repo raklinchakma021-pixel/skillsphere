@@ -7,7 +7,16 @@ import Link from "next/link";
 export const metadata = {
   title: "SkillSphere - All Courses",
 };
-export default function CoursesPage() {
+export default function CoursesPage({searchParams, search}) {
+
+const searchQuery = (searchParams?.search || "").toLowerCase();
+
+const filteredCourses = (courses || []).filter((course) => {
+  const title = course?.title || "";
+
+  return title.toLowerCase().includes(searchQuery);
+});
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       
@@ -15,11 +24,15 @@ export default function CoursesPage() {
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
         All Courses
       </h1>
-
+{search && (
+        <p className="mb-4 text-gray-600">
+          Search result for: <span className="font-semibold">{search}</span>
+        </p>
+      )}
       {/* Grid */}
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        
-        {courses.map((course) => (
+          {filteredCourses.length > 0 ? (
+        filteredCourses.map((course) => (
           <div
             key={course.id}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden"
@@ -76,7 +89,14 @@ export default function CoursesPage() {
 
             </div>
           </div>
-        ))}
+        ))
+        ) : 
+          (
+          <p className="text-red-500">No courses found.</p>
+        )
+        
+      
+      }
 
       </div>
     </div>

@@ -6,6 +6,7 @@ import React from "react";
 import userAvatar from "@/assets/user.png";
 import NavLink from "./NavLink";
 import { authClient } from "@/lib/auth-client";
+import SearchBar from "../homepage/SearchBar";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
@@ -14,6 +15,8 @@ const Navbar = () => {
   console.log(user, isPending, "user");
 
   return (
+   <>
+   
     <div className="container mx-auto flex justify-between gap-4 mt-6">
       <div></div>
       <ul className="flex justify-between items-center text-gray-700 gap-3">
@@ -29,7 +32,6 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-
       {isPending ? (
         <span className="loading loading-spinner loading-lg"></span>
       ) : user ? (
@@ -54,6 +56,9 @@ const Navbar = () => {
         </button>
       )}
     </div>
+      <SearchBar/>
+
+   </>
   );
 };
 

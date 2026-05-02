@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import coursesData from "@/lib/data.json";
+import coursesData from "@/lib/courses.json";
 
 export default function PopularCourses() {
   // Sort by rating (highest first) and take top 3

@@ -10,6 +10,7 @@
 
 import HeroSection from '@/components/homepage/HeroSection';
 import LearningTips from '@/components/homepage/LearningTips';
+import TrendingCourses from '@/components/homepage/NewReleases';
 import PopularCourses from '@/components/homepage/PopularCourses';
 import TopInstructors from '@/components/homepage/TopInstructors';
 import React from 'react';
@@ -21,6 +22,7 @@ const Home = () => {
       <>
       <main>
         <HeroSection/>
+        <TrendingCourses/>
         <PopularCourses/>
         <LearningTips/>
         <TopInstructors/>

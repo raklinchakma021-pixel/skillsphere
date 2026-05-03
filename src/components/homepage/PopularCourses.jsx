@@ -4,24 +4,26 @@ import coursesData from "@/lib/courses.json";
 
 export default function PopularCourses() {
   // Sort by rating (highest first) and take top 3
-  const topCourses = [...coursesData]
-    .sort((a, b) => b.rating - a.rating)
-    .slice(0, 3);
+  const topCourses = [...coursesData].slice(0, 3);
 
   return (
-    <section className="py-16 px-6 bg-gray-50">
+    <section className="py-16 px-6 bg-gray-50" style={{
+          backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M1180 75L1179 -124' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1436 421L1435 675' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M730 435L729 120' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M312 464L311 239' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M122 234L121 -157' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1326 244L1325 -12' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M371 496L370 889' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1180 62L1179 468' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1218 132L1217 -79' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1047 300L1046 -32' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M435 485L434 117' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M507 458L506 663' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M226 434L225 38' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1158 59L1157 -282' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M890 367L889 784' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M457 247L456 654' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M786 411L785 610' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M194 86L193 -241' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M173 377L172 584' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M828 280L827 43' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1315 218L1314 461' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M591 380L590 178' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M988 257L987 69' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M863 273L862 493' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1320 141L1319 408' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M392 397L391 643' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M103 159L102 -218' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M596 473L595 200' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M411 409L410 16' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M692 488L691 121' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M722 191L721 -153' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M365 321L364 128' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1099 530L1098 864' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M181 462L180 755' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M769 409L768 732' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1071 337L1070 181' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='0%25' x2='0%25' y2='100%25' id='SvgjsLinearGradient1001'%3e%3cstop stop-color='rgba(28%2c 83%2c 142%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='%231c538e' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='0%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1002'%3e%3cstop stop-color='rgba(28%2c 83%2c 142%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='%231c538e' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e")`,
+          backgroundSize: "cover",
+        }} >
       <div className="max-w-6xl mx-auto">
         
         {/* Section Title */}
-        <h2 className="text-3xl font-bold text-center mb-10">
+        <h2 className="text-3xl font-bold text-center text-white mb-10">
           🔥 Popular Courses
         </h2>
 
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8" >
           {topCourses.map((course) => (
             <div
               key={course.id}
+           
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
             >
               {/* Image */}
@@ -36,8 +38,8 @@ export default function PopularCourses() {
               </div>
 
               {/* Content */}
-              <div className="p-5">
-                <h3 className="text-xl font-semibold mb-2">
+              <div className="p-5 text-white">
+                <h3 className="text-xl font-semibold text-black mb-2 pt-8">
                   {course.title}
                 </h3>
 
@@ -51,7 +53,7 @@ export default function PopularCourses() {
 
                 <Link
                   href={`/courses/${course.id}`}
-                  className="inline-block w-full text-center bg-indigo-600 text-black py-2 rounded-lg hover:bg-indigo-700 transition"
+                  className="inline-block w-full text-center text-white bg-indigo-600 text-black py-2 rounded-lg hover:bg-indigo-700 transition"
                 >
                   View Details
                 </Link>

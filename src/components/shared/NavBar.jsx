@@ -19,7 +19,7 @@ const Navbar = () => {
    
     <div className="container mx-auto flex justify-between gap-4 mt-6">
       <div></div>
-      <ul className="flex justify-between items-center text-gray-700 gap-3">
+      <ul className="flex justify-between items-center text-gray-700 gap-3 text-white">
         <li>
           <NavLink href={"/"}>Home</NavLink>
         </li>
@@ -27,7 +27,7 @@ const Navbar = () => {
           <NavLink href={"/courses"}>Courses</NavLink>
         </li>
         <li>
-          <NavLink href={"/profile"} className={"text-yellow-500"}>
+          <NavLink href={"/profile"} >
             My Profile
           </NavLink>
         </li>
@@ -38,20 +38,20 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <h2>Hello, {user.name}</h2>
           <Image
-            src={ user.image || userAvatar}
+            src={user?.image || userAvatar}
             alt="User avatar"
             width={60}
             height={60}
           />
           <button
-            className="btn bg-purple-500 text-white"
+            className="btn bg-indigo-600 text-white"
             onClick={async () => await authClient.signOut()}
           >
             Logout
           </button>
         </div>
       ) : (
-        <button className="btn bg-purple-500 text-white">
+        <button className="btn bg-indigo-600 text-white">
           <Link href={"/login"}>Login</Link>
         </button>
       )}

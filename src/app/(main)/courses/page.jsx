@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import courses from "@/lib/courses.json";
 import Link from "next/link";
+import TrendingCourses from "@/components/homepage/NewReleases";
 
 export const metadata = {
   title: "SkillSphere - All Courses",
@@ -9,10 +10,11 @@ export const metadata = {
 
 export default function CoursesPage() {
   return (
+   <>
     <div className="max-w-7xl mx-auto px-6 py-16">
       
       {/* Heading */}
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
+      <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">
         All Courses
       </h1>
 
@@ -80,5 +82,9 @@ export default function CoursesPage() {
 
       </div>
     </div>
+
+        <TrendingCourses/>
+
+   </>
   );
 }

@@ -1,38 +1,68 @@
-// import courses from "@/lib/data.json";
-import {getCourseById} from "@/lib/data";
-export default function CourseDetails({ params }) {
-    console.log(params)
-   const course = getCourseById(params.id);
+import courses from "@/lib/courses.json";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
-  if (!course) {
-    return <h1 className="p-10 text-red-500">Course Not Found</h1>;
-  }
-return <h1>ID: {params.id}</h1>;
-  // return (
-  //   <div className="p-10 max-w-4xl mx-auto">
-  //     <img src={course.image} alt={course.title} className="mb-5" />
+export default async function CourseDetails({ params }) {
+  const { id } = await params;
 
-  //     <h1 className="text-3xl font-bold mb-3">{course.title}</h1>
-  //     <p className="mb-2">Instructor: {course.instructor}</p>
-  //     <p className="mb-2">Duration: {course.duration}</p>
-  //     <p className="mb-2">Level: {course.level}</p>
-  //     <p className="mb-4">{course.description}</p>
+  const courseId = Number(id);
 
-  //     {/* 🔥 Static Curriculum */}
-  //     <div className="mt-6">
-  //       <h2 className="text-2xl font-semibold mb-3">
-  //         Course Curriculum
-  //       </h2>
+  const course = courses.find((c) => c.id === courseId);
 
-  //       <ul className="list-disc pl-5 space-y-2">
-  //         <li>Introduction & Setup</li>
-  //         <li>HTML & CSS Basics</li>
-  //         <li>JavaScript Fundamentals</li>
-  //         <li>React Basics</li>
-  //         <li>Project Building</li>
-  //         <li>Deployment</li>
-  //       </ul>
-  //     </div>
-  //   </div>
-  // );
+  if (!course) return notFound();
+
+  return (
+    <main className="max-w-4xl mx-auto p-6">
+      {/* Image */}
+      <div className="rounded-xl overflow-hidden shadow-md">
+        <img
+          src={course.image}
+          alt={course.title}
+          className="w-full h-72 object-cover"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="mt-6 space-y-4">
+        <h1 className="text-3xl text-white font-bold">{course.title}</h1>
+
+        <p className="text-gray-400">{course.description}</p>
+
+        {/* Info grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm mt-4">
+          <div className="bg-gray-100 p-3 rounded-lg">
+            <span className="font-semibold">Instructor</span>
+            <p>{course.instructor}</p>
+          </div>
+
+          <div className="bg-gray-100 p-3 rounded-lg">
+            <span className="font-semibold">Duration</span>
+            <p>{course.duration}</p>
+          </div>
+
+          <div className="bg-gray-100 p-3 rounded-lg">
+            <span className="font-semibold">Level</span>
+            <p>{course.level}</p>
+          </div>
+
+          <div className="bg-gray-100 p-3 rounded-lg">
+            <span className="font-semibold">Category</span>
+            <p>{course.category}</p>
+          </div>
+
+          <div className="bg-gray-100 p-3 rounded-lg">
+            <span className="font-semibold">Rating</span>
+            <p>⭐ {course.rating}</p>
+          </div>
+        </div>
+
+        {/* Back button */}
+        <Link href="/courses">
+          <button className="mt-6 bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+            ← Back to Courses
+          </button>
+        </Link>
+      </div>
+    </main>
+  );
 }

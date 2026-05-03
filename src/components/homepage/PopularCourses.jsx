@@ -31,15 +31,14 @@ export default function PopularCourses() {
                 <Image
   src={course.image}
   alt={course.title}
-  width={400}
-  height={250}
+ fill
   className="object-cover"
 />
               </div>
 
               {/* Content */}
               <div className="p-5 text-white">
-                <h3 className="text-xl font-semibold text-black mb-2 pt-8">
+                <h3 className="text-xl font-semibold text-black mb-2 ">
                   {course.title}
                 </h3>
 

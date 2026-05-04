@@ -6,7 +6,6 @@ import React from "react";
 import userAvatar from "@/assets/user.png";
 import NavLink from "./NavLink";
 import { authClient } from "@/lib/auth-client";
-import SearchBar from "../homepage/SearchBar";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();

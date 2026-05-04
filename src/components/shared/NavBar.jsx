@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
    <>
    
-    <div className="container mx-auto flex justify-between gap-4 mt-6">
+    <div className="container mx-auto flex flex-col md:flex-row px-8 md:px-0 justify-between gap-4 mt-6">
       <div></div>
       <ul className="flex justify-between items-center text-gray-700 gap-3 text-white">
         <li>

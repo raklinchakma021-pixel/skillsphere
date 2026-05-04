@@ -6,6 +6,7 @@ import React from "react";
 import userAvatar from "@/assets/user.png";
 import NavLink from "./NavLink";
 import { authClient } from "@/lib/auth-client";
+import RightSidebar from "../homepage/SocialSign";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
@@ -55,6 +56,7 @@ const Navbar = () => {
         </button>
       )}
     </div>
+    <RightSidebar/>
 
    </>
   );

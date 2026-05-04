@@ -1,3 +1,6 @@
+import dns from 'dns';
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";

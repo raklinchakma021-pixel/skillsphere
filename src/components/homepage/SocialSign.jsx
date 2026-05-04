@@ -2,7 +2,7 @@
 
 import { authClient } from "@/lib/auth-client";
 import React from "react";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import {  FaGoogle } from "react-icons/fa";
 
 const RightSidebar = () => {
   const handleGoogleSignin = async () => {
@@ -12,13 +12,7 @@ const RightSidebar = () => {
 
     console.log(data, "data");
   };
-  const handleGithubSignin = async () => {
-    const data = await authClient.signIn.social({
-      provider: "github",
-    });
-
-    console.log(data, "data");
-  };
+ 
 
   return (
     <div className="flex gap-4 items-center mr-9 my-4 justify-end ">

@@ -56,7 +56,6 @@ const Navbar = () => {
         </button>
       )}
     </div>
-      <SearchBar/>
 
    </>
   );

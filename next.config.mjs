@@ -2,7 +2,6 @@
 const nextConfig = {
   /* config options here */
    images: {
-       domains: ["scontent.fcgp7-1.fna.fbcdn.net"],
     remotePatterns: [
       {
         protocol: 'https',
@@ -10,6 +9,10 @@ const nextConfig = {
         port: '',
         search: '',
       },
+      {
+        protocol: "https",
+        hostname: "scontent.fcgp7-1.fna.fbcdn.net",
+      }
     ],
   },
 };
